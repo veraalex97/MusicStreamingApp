@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MusicStreaming</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+
+	<header>
+		<div class="nav">
+			<ul>
+				<li class="home"><a class="active" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+				<li class="about"><a href="#">Top Songs</a></li>
+			</ul>
+		</div>
+	</header>
+
+<%= yield %>
+
+</body>
+</html>
