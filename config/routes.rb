@@ -10,6 +10,10 @@ Rails.application.routes.draw do
 
   get 'songs/delete'
 
+  get '/login' => 'sessions#new'
+  post '/login' => 'session#create'
+  get '/logout' => 'sessions#destroy'
+
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
