@@ -13,9 +13,18 @@
 	<header>
 		<div class="nav">
 			<ul>
-				<li class="home"><a class="active" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+				<!-- <li class="home"><a class="active" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li> -->
+				<li><%= link_to "Home", root_path %></li>
 				<li class="about"><a href="#">Top Songs</a></li>
+					<span class="login">
+						<% if current_user %>
+						  <li><a href="#"><%= current_user.username %></a></li> <li><%= link_to "Logout", '/logout' %></li>
+						<% else %>
+						  <li><%= link_to 'Login', '/login' %></li> <li><%= link_to 'Signup', '/signup' %></li>
+						<% end %>
+					</span>
 			</ul>
+
 		</div>
 	</header>
 

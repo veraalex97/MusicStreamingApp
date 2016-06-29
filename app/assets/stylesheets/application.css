@@ -80,3 +80,7 @@ body {
   }
   */
 }
+
+.login li{
+  float: right;
+}
